@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 30px 0 0 0;
+    width: 100%;
+
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #f9d342;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justifyCenter {
+    justify-content: center;
+}
+
+.w-48 {
+    width: 48%;
+}
+
+
+button {
+    margin-top: 30px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    background: #f9d342;
+    color: #0b132b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #f5c518;
+    transform: scale(1.05);
+}
+
+.resultat {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #89f26e;
+}
+
+
+/* section de gauche */
+.left {
+    /*background-color: red;*/
+}
+
+#conteneurRoueLeft {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+#canvasRoueLeft {
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+#pinteurLeft {
+    position: absolute;
+    top: 10px;
+    /* On place le pointeur en bas du conteneur */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #f9d342;
+    /* flèche vers le haut */
+    z-index: 10;
+}
+
+
+/* section de droite */
+.right {
+    /*background-color: rgb(210, 177, 30);*/
+}
+
+#conteneurRoueRight {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+#canvasRoueRight {
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+#pinteurRight{
+    position: absolute;
+    top: 10px;
+    /* On place le pointeur en bas du conteneur */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 40px solid #f9d342;
+    /* flèche vers le haut */
+    z-index: 10;
+}
