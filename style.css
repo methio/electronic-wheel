@@ -24,6 +24,9 @@ body {
   width: 100%;
   padding-top: 50px;
   gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -47,12 +50,18 @@ h1 {
   width: 45%;
 }
 
+
+
 .justifyCenter {
   justify-content: center;
 }
 
 .spaceBetween {
   justify-content: space-between;
+}
+
+.spaceAround{
+  justify-content: space-around;
 }
 
 .alignCenter {
@@ -86,7 +95,9 @@ h1 {
 
 
 /* SECTIONS & BLOCS */
-.logo{width: 80px;}
+.logo{
+    width: 80px;
+margin: auto;}
 
 section {
   display: flex;
@@ -114,7 +125,8 @@ section h2 {
 
 
 #boutonLancer {
-  margin-top: 30px;
+    width: fit-content;
+    margin: auto;
   padding: 15px 40px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -126,7 +138,8 @@ section h2 {
   box-shadow: 0 5px 15px var(--primary);
   transition: all 0.3s ease;
   font-family: "IBM Plex Mono", monospace;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+
 }
 
 #boutonLancer:hover {
@@ -143,7 +156,6 @@ section h2 {
   width: 100%;
   font-size: 20px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .bigTxt {
