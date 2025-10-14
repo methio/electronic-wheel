@@ -86,6 +86,7 @@ h1 {
 
 
 /* SECTIONS & BLOCS */
+.logo{width: 80px;}
 
 section {
   display: flex;
