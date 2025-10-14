@@ -17,7 +17,7 @@ const inputArray = [
 const outputArray = [
     { nom: '10kΩ rotary potentiometer', src: 'img/output/rotary-potentiometer.png' },
     { nom: 'Analog microphone module', src: 'img/output/analog-microphone.png' },
-    { nom: 'Temperature sensor TMP36', src: 'img/output/temperature-sensor.png' },
+    { nom: 'Temperature sensor TMP36', src: 'img/output/temperatur-sensor.png' },
     { nom: 'Humidity sensor DHT11', src: 'img/output/humidity-sensor.png' },
     { nom: 'Ultrasonic sensor HC-SR04', src: 'img/output/ultrasonic-sensor.png' },
     { nom: 'Ball switch SW200D', src: 'img/output/ball-switch.png' },
@@ -25,8 +25,6 @@ const outputArray = [
     { nom: 'Push button', src: 'img/output/push-button.png' },
 ];
 
-// Charger la police Inter avant de dessiner les roues car pas encore dans la lib
-const interFont = new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTZ3z2lAa.woff2)');
 
 
 // --- PARAMÉTRAGE ROUE DE GAUCHE ---
@@ -175,8 +173,15 @@ function lancerLesDeuxRoues() {
                 <p class="w-45 bigTxt">${composantOutput.toUpperCase()}</p><img class ="imageComposant" src="${srcImgRight}" alt="">
                 </div>
                 `;
-        }
-    }, interval);
-}
+
+                //  CONFETTI avec la lib https://www.npmjs.com/package/canvas-confetti
+                confetti({
+                    particleCount: 400,
+                    spread: 70,
+                    origin: { y: 0.6 } // départ un peu plus bas que le haut de la page
+                });
+                        }
+                    }, interval);
+                }
 
 document.getElementById('boutonLancer').addEventListener('click', lancerLesDeuxRoues);
