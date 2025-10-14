@@ -11,23 +11,24 @@
 
 <body  class="flex justifyCenter">
 
-    <section class="w-48 left"> <!--roue de gauche-->
+    <section class="w-45 left"> <!--roue de gauche-->
         <h2>Input</h2>
         <!-- Conteneur principal de la roue -->
         <div id="conteneurRoueLeft">
             <div id="pinteurLeft"></div>
             <canvas id="canvasRoueLeft" width="500" height="500"></canvas>
+            <div class="glow" id="glowLeft"></div> <!-- glow overlay -->
         </div>
 
         <br />
-        <button id="boutonLancerLeft">Lancer la roue</button>
+
 
         <div id="resultatLeft" class="resultat"></div>
 
 
     </section>
 
-        <section class="w-48 right"> <!--roue de droite-->
+        <section class="w-45 right"> <!--roue de droite-->
         <h2>Output</h2>
         <!-- Conteneur principal de la roue -->
         <div id="conteneurRoueRight">
@@ -36,13 +37,12 @@
         </div>
 
         <br />
-        <button id="boutonLancerRight">Lancer la roue</button>
-
         <div id="resultatRight" class="resultat"></div>
 
 
     </section>
 
+<button id="boutonLancer">Lancer les roues !</button>
 
 
 
