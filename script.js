@@ -159,7 +159,7 @@ function lancerLesDeuxRoues() {
             if (segmentInput) segmentInput.textFillStyle = `${tertiary}`;
             if (segmentOutput) segmentOutput.textFillStyle = `${tertiary}`;
             roueLeft.draw();
-            roueRight.draw();s
+            roueRight.draw();
 
             // affichage des résultats avec image
             document.getElementById('resultatLeft').innerHTML =
