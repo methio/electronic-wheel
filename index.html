@@ -21,15 +21,15 @@
  </p>
 
  <button id="boutonLancer">Spin !</button>
-
+<!--
  <div  class="flex spaceAround w-60 center">
-    <section class="w-45 left"> <!--roue de gauche-->
+
+    <section class="w-45 left">
         <h2>Input</h2>
-        <!-- Conteneur principal de la roue -->
         <div id="conteneurRoueLeft">
             <div id="pinteurLeft"></div>
             <canvas id="canvasRoueLeft" width="420" height="420"></canvas>
-            <div class="glow" id="glowLeft"></div> <!-- glow overlay -->
+            <div class="glow" id="glowLeft"></div>
         </div>
 
         <br />
@@ -40,9 +40,8 @@
 
     </section>
 
-        <section class="w-45 right"> <!--roue de droite-->
+        <section class="w-45 right">
         <h2>Output</h2>
-        <!-- Conteneur principal de la roue -->
         <div id="conteneurRoueRight">
             <div id="pinteurRight"></div>
             <canvas id="canvasRoueRight" width="420" height="420"></canvas>
@@ -54,6 +53,33 @@
 
     </section>
  </div>
+-->
+
+<section>
+
+    <div class="roulette-container">
+        <h2>Input</h2>
+        <div id="conteneurRoueLeft">
+            <div id="pinteurLeft"></div>
+            <canvas id="canvasRoueLeft" width="420" height="420"></canvas>
+            <div class="glow" id="glowLeft"></div>
+        </div>
+    </div>
+
+    <div id="resultat-container">
+        <div id="resultatLeft" class="resultat"></div>
+        <div id="resultatRight" class="resultat"></div>
+    </div>
+
+    <div class="roulette-container">
+        <h2>Output</h2>
+        <div id="conteneurRoueRight">
+            <div id="pinteurRight"></div>
+            <canvas id="canvasRoueRight" width="420" height="420"></canvas>
+        </div>
+    </div>
+
+</section>
 
 
 

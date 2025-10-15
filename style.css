@@ -106,7 +106,7 @@ h1 {
     width: 80px;
 margin: auto;}
 
-section {
+/* section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +114,37 @@ section {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 8px 20px #5593b9;
+} */
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--tertiary);
+  padding: 20px 40px;
+  margin: 32px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px #5593b9;
+
+  .roulette-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #resultat-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+
+    .resultat {
+      display: flex;
+      flex-direction: column;  
+    }
+  }
 }
+
 
 section h2 {
   margin-bottom: 15px;
@@ -123,12 +153,12 @@ section h2 {
   font-family: "IBM Plex Mono", monospace;
 }
 
-.resultat {
+/* .resultat {
   margin-top: 15px;
   font-weight: 600;
   text-align: center;
   color: #ffdfdf;
-}
+} */
 
 
 #boutonLancer {

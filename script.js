@@ -6,15 +6,6 @@ let tertiary = '#EAF4FB'
 
 // --- TABLEAU OUTPU ET INPUT ---
 const inputArray = [
-    { nom: 'LED', src: 'img/input/led.png' },
-    { nom: 'RGB LED', src: 'img/input/rgb-led.png' },
-    { nom: '12 leds neopixels ring', src: 'img/input/ring-led.png' },
-    { nom: 'microservo', src: 'img/input/microservo.png' },
-    { nom: 'motoreductor', src: 'img/input/motoreductor.png' },
-    { nom: 'I2C LCD screen', src: 'img/input/LCD-screen.png' },
-];
-
-const outputArray = [
     { nom: '10kΩ rotary potentiometer', src: 'img/output/rotary-potentiometer.png' },
     { nom: 'Analog microphone module', src: 'img/output/analog-microphone.png' },
     { nom: 'Temperature sensor TMP36', src: 'img/output/temperatur-sensor.png' },
@@ -25,31 +16,20 @@ const outputArray = [
     { nom: 'Push button', src: 'img/output/push-button.png' },
 ];
 
+const outputArray = [
+    { nom: 'LED', src: 'img/input/led.png' },
+    { nom: 'RGB LED', src: 'img/input/rgb-led.png' },
+    { nom: '12 leds neopixels ring', src: 'img/input/ring-led.png' },
+    { nom: 'microservo', src: 'img/input/microservo.png' },
+    { nom: 'motoreductor', src: 'img/input/motoreductor.png' },
+    { nom: 'I2C LCD screen', src: 'img/input/LCD-screen.png' },
+];
+
 
 
 // --- PARAMÉTRAGE ROUE DE GAUCHE ---
 const roueLeft = new Winwheel({
     canvasId: 'canvasRoueLeft',
-    numSegments: 6,
-    lineWidth: 1,
-    outerRadius: 190,
-    textFontSize: 12,
-    textFillStyle: `${primary}`,
-    textFontFamily: 'Inter',
-    segments: [
-        { fillStyle: `${tertiary}`, text: 'LED', strokeStyle: `${primary}` },
-        { fillStyle: `${tertiary}`, text: 'RGB LED', strokeStyle: `${primary}` },
-        { fillStyle: `${tertiary}`, text: '12 leds neopixels ring', strokeStyle: `${primary}` },
-        { fillStyle: `${tertiary}`, text: 'microservo', strokeStyle: `${primary}` },
-        { fillStyle: `${tertiary}`, text: 'motoreductor', strokeStyle: `${primary}` },
-        { fillStyle: `${tertiary}`, text: 'I2C LCD screen', strokeStyle: `${primary}` },
-    ]
-});
-roueLeft.draw();
-
-// --- PARAMÉTRAGE ROUE DE DROITE ---
-const roueRight = new Winwheel({
-    canvasId: 'canvasRoueRight',
     numSegments: 8,
     outerRadius: 190,
     textFontSize: 12,
@@ -67,6 +47,26 @@ const roueRight = new Winwheel({
         { fillStyle: `${tertiary}`, text: 'Photoresistor module', strokeStyle: `${primary}` },
         { fillStyle: `${tertiary}`, text: 'Push button', strokeStyle: `${primary}` },
     ]
+});
+roueLeft.draw();
+
+// --- PARAMÉTRAGE ROUE DE DROITE ---
+const roueRight = new Winwheel({
+    canvasId: 'canvasRoueRight',
+    numSegments: 6,
+    lineWidth: 1,
+    outerRadius: 190,
+    textFontSize: 12,
+    textFillStyle: `${primary}`,
+    textFontFamily: 'Inter',
+    segments: [
+        { fillStyle: `${tertiary}`, text: 'LED', strokeStyle: `${primary}` },
+        { fillStyle: `${tertiary}`, text: 'RGB LED', strokeStyle: `${primary}` },
+        { fillStyle: `${tertiary}`, text: '12 leds neopixels ring', strokeStyle: `${primary}` },
+        { fillStyle: `${tertiary}`, text: 'microservo', strokeStyle: `${primary}` },
+        { fillStyle: `${tertiary}`, text: 'motoreductor', strokeStyle: `${primary}` },
+        { fillStyle: `${tertiary}`, text: 'I2C LCD screen', strokeStyle: `${primary}` },
+    ]    
 });
 roueRight.draw();
 
@@ -159,19 +159,19 @@ function lancerLesDeuxRoues() {
             if (segmentInput) segmentInput.textFillStyle = `${tertiary}`;
             if (segmentOutput) segmentOutput.textFillStyle = `${tertiary}`;
             roueLeft.draw();
-            roueRight.draw();
+            roueRight.draw();s
 
             // affichage des résultats avec image
             document.getElementById('resultatLeft').innerHTML =
-                `<div class="flex spaceBetween alignCenter"> 
-                <p class="w-45 bigTxt">${composantInput.toUpperCase()}</p><img class ="imageComposant" src="${srcImgLeft}" alt="">
-                </div>
+                ` 
+                <p class="bigTxt" style="margin: auto;">${composantInput}</p><img class="imageComposant" src="${srcImgLeft}" alt="" style="margin: auto;">
+                
                 `;
 
             document.getElementById('resultatRight').innerHTML =
-                `<div class="flex spaceBetween alignCenter"> 
-                <p class="w-45 bigTxt">${composantOutput.toUpperCase()}</p><img class ="imageComposant" src="${srcImgRight}" alt="">
-                </div>
+                `
+                <img class ="imageComposant" src="${srcImgRight}" alt="" style="margin: auto;"><p class="bigTxt" style="margin: auto;">${composantOutput}</p>
+                
                 `;
 
                 //  CONFETTI avec la lib https://www.npmjs.com/package/canvas-confetti
