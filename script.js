@@ -32,8 +32,8 @@ const roueLeft = new Winwheel({
     canvasId: 'canvasRoueLeft',
     numSegments: 6,
     lineWidth: 1,
-    outerRadius: 220,
-    textFontSize: 14,
+    outerRadius: 190,
+    textFontSize: 12,
     textFillStyle: `${primary}`,
     textFontFamily: 'Inter',
     segments: [
@@ -51,8 +51,8 @@ roueLeft.draw();
 const roueRight = new Winwheel({
     canvasId: 'canvasRoueRight',
     numSegments: 8,
-    outerRadius: 220,
-    textFontSize: 14,
+    outerRadius: 190,
+    textFontSize: 12,
     textFillStyle: `${primary}`,
     lineWidth: 1,
     textFontFamily: 'Inter',
